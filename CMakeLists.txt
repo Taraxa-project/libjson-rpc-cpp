@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 # setup directory where we should look for cmake files
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
@@ -15,11 +15,6 @@ project(libjson-rpc-cpp)
 # list command no longer ignores empty elements
 cmake_policy(SET CMP0007 NEW)
 cmake_policy(SET CMP0012 NEW)
-
-if (${CMAKE_MAJOR_VERSION} GREATER 2)
-    # old policy do not use MACOSX_RPATH
-    cmake_policy(SET CMP0042 OLD)
-endif()
 
 set(MAJOR_VERSION 1)
 set(MINOR_VERSION 4)
